@@ -4,8 +4,8 @@
             (= (remainder x 2) 0))
         (define (iter a n)
             (cond ((= n 0) a)
-            ((even? n) (displayln a) (displayln n) (iter (* a a) (/ n 2)))
-            (else (displayln a) (displayln n) (iter (* a b) (- n 1)))))
+            ((even? n) (iter (* a a) (/ n 2)))
+            (else (iter (* a b) (- n 1)))))
         (if (= n 0) 1
             (iter b (- n 1)))
     )
