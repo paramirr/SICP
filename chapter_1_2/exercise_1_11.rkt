@@ -1,4 +1,4 @@
-(module exercise_1_10 racket
+(module exercise_1_11 racket
     (define (recursive-proc n)
         (if (< n 3) n
             (+ (recursive-proc (- n 1)) (* 2 (recursive-proc (- n 2))) (* 3 (recursive-proc (- n 3))))))
