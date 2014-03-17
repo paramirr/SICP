@@ -2,15 +2,15 @@
     (define (fast-expt-iter b n)
         (define (even? x)
             (= (remainder x 2) 0))
-        (define (iter a n)
-            (cond ((= n 0) a)
-            ((even? n) (iter (* a a) (/ n 2)))
-            (else (iter (* a b) (- n 1)))))
-        (if (= n 0) 1
-            (iter b (- n 1)))
+        (define (iter r d k)
+            (cond ((= k 0) r)
+                  ((even? k) (iter r (* d d) (/ k 2)))
+                  (else (displayln k) (iter (* r d) d (- k 1)))))
+        (cond ((= n 0) 1)
+              (else (iter 1 b n)))
     )
 
-    (fast-expt-iter 3 20)
-    (fast-expt-iter 2 10)
+    (fast-expt-iter 3 7)
+    (fast-expt-iter 2 11)
 
 )
