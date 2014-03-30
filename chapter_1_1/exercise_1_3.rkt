@@ -5,8 +5,8 @@
         (if (> x y) (square x) (square y)))
 
     (define (square-and-sum-big-two x y z)
-        (cond ((> x y z) (+ (square x) (square-big y z)))
-              ((> y x z) (+ (square y) (square-big x z)))
+        (cond ((or (> x y) (> x z)) (+ (square x) (square-big y z)))
+              ((or (> y x) (> y z)) (+ (square y) (square-big x z)))
               (else (+ (square z) (square-big x y)))))
 
     (= (square-and-sum-big-two 1 2 3) 13)
