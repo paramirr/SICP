@@ -8,9 +8,11 @@
   * 1.1.7에서 썼던 방법과 다른 방법 사용
 
   * 미분되는 함수 g(x) 의 근은 다음 함수 f(x)의 정점
+
 ![equation](http://latex.codecogs.com/gif.download?f%28x%29%20%3D%20x%20-%20%5Cfrac%7Bg%28x%29%7D%7B%7Bg%28x%29%7D%27%7D)
 
   * 뉴튼 방법을 프로시저로 나타내려면 미분의 정의를 프로시저로 표현해야 함
+
 ![equation](http://latex.codecogs.com/gif.download?%7Bg%28x%29%7D%27%20%3D%20%5Cfrac%7Bg%28x+dx%29-g%28x%29%29%7D%7Bdx%7D)
 
   * 다음과 같은 방식으로 미분된 프로시저를 반환하는 프로시저를 만들 수 있음
